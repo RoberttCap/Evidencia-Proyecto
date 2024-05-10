@@ -50,7 +50,7 @@ def xy(count):
 def tap(x, y):
     """Update mark and hidden tiles based on tap."""
     global taps
-    
+
     spot = index(x, y)
     mark = state['mark']
 
@@ -61,7 +61,6 @@ def tap(x, y):
         hide[mark] = False
         state['mark'] = None
     taps = taps + 1
-    
 
 
 def draw():
@@ -92,16 +91,19 @@ def draw():
 
 
 def counter():
+    """Counts the total taps in the game."""
     goto(-200, 200)
     color('black')
     write("Taps: " + str(taps), font=('Arial', 40, 'normal'))
-    
+
 
 def all_uncovered():
+    """Checks if all tiles have been uncovered."""
     if all(not hidden for hidden in hide):
         goto(-200, -250)
         color('black')
         write("¡Todos los cuadros descubiertos!", font=('Arial', 20, 'normal'))
+
 
 shuffle(tiles)
 setup(420, 520, 370, 0)
