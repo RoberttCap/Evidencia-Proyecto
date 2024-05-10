@@ -88,11 +88,20 @@ def draw():
     update()
     ontimer(draw, 100)
     counter()
+    all_uncovered()
+
 
 def counter():
     goto(-200, 200)
     color('black')
     write("Taps: " + str(taps), font=('Arial', 40, 'normal'))
+    
+
+def all_uncovered():
+    if all(not hidden for hidden in hide):
+        goto(-200, -250)
+        color('black')
+        write("¡Todos los cuadros descubiertos!", font=('Arial', 20, 'normal'))
 
 shuffle(tiles)
 setup(420, 520, 370, 0)
