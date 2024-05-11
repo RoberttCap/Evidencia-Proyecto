@@ -20,3 +20,10 @@ Verificacion de la casilla  si está ocupada en la matriz board con la funcion t
 Se añadió en drawx y drawo el color con las variables COLOR_X y COLOR_O
 
 Se cambió el from turtle import para incluir solo las funciones y clases necesarias 
+
+Nombre: Fernando Israel Rios Garcia
+Cambios al juego de pacman:
+
+Se agrego cambios al color del fondo del juego en la cli. Ademas se modifico la velocidad de los fantasmas.
+
+Se verifico el la convecion pep 8 en el codiog fuente y se realizo un cambio pequeno, un linea en blanco al final del programa.
